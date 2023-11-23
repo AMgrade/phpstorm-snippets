@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.amgrade.phpstorm.snippets</id>
+    <name>PhpStorm Snippets</name>
+    <vendor email="dima.matters@gmail.com" url="https://www.amgrade.com">AMgrade</vendor>
+
+    <description>
+        <![CDATA[
+            PhpStorm snippets used at AMgrade
+        ]]>
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplates file="/liveTemplates/JS.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/Laravel.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/PHP.xml"/>
+        <liveTemplateContext implementation="com.amgrade.phpstorm.snippets.PhpContext" contextId="PHP"/>
+        <liveTemplateMacro implementation="com.amgrade.phpstorm.snippets.PhpNamespaceMacro"/>
+        <liveTemplateMacro implementation="com.amgrade.phpstorm.snippets.LaravelCommandSignature"/>
+        <liveTemplateMacro implementation="com.amgrade.phpstorm.snippets.LaravelModelTable"/>
+    </extensions>
+</idea-plugin>

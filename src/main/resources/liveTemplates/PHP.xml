@@ -1,0 +1,48 @@
+<templateSet group="[AMgrade] PHP">
+    <template name="ds" value="declare(strict_types=1);" description="declare(strict_types=1);" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="pc" value="&lt;?php&#10;&#10;declare(strict_types=1);&#10;&#10;namespace $NAMESPACE$;&#10;&#10;class $CLASS$&#10;{&#10;    $END$&#10;}&#10;" description="class" toReformat="false" toShortenFQNames="true">
+        <variable name="NAMESPACE" expression="phpNamespace()" defaultValue="" alwaysStopAt="false" />
+        <variable name="CLASS" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+        <context>
+            <option name="HTML" value="true" />
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="ph" value="&lt;?php&#10;&#10;declare(strict_types=1);&#10;&#10;" description="raw php" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="HTML" value="true" />
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="pha" value="&lt;?php&#10;&#10;declare(strict_types=1);&#10;&#10;return [&#10;    $END$&#10;];&#10;" description="raw php array" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="HTML" value="true" />
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="pi" value="&lt;?php&#10;&#10;declare(strict_types=1);&#10;&#10;namespace $NAMESPACE$;&#10;&#10;interface $CLASS$&#10;{&#10;    $END$&#10;}&#10;" description="interface" toReformat="false" toShortenFQNames="true">
+        <variable name="NAMESPACE" expression="phpNamespace()" defaultValue="" alwaysStopAt="false" />
+        <variable name="CLASS" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+        <context>
+            <option name="HTML" value="true" />
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="pt" value="&lt;?php&#10;&#10;declare(strict_types=1);&#10;&#10;namespace $NAMESPACE$;&#10;&#10;trait $CLASS$&#10;{&#10;    $END$&#10;}&#10;" description="trait" toReformat="false" toShortenFQNames="true">
+        <variable name="NAMESPACE" expression="phpNamespace()" defaultValue="" alwaysStopAt="false" />
+        <variable name="CLASS" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+        <context>
+            <option name="HTML" value="true" />
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="rv" value="@return void" description="return void" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="PHP Comment" value="true" />
+        </context>
+    </template>
+</templateSet>
