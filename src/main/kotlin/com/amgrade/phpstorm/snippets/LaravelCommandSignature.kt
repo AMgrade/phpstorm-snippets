@@ -14,17 +14,21 @@ internal class LaravelCommandSignature : MacroBase {
             return null
         }
 
-        val path = file.getParent().getName().lowercase()
-
-        var filename = Regex("Command$").replace(file.getNameWithoutExtension(), "")
-        filename = Regex("([A-Z])").replace(filename, "-$1")
-        filename = filename.lowercase()
-        filename = Regex("^-").replace(filename, "")
+        val path = this.toKebabCase(file.getParent().getName())
+        val filename = this.toKebabCase(Regex("Command$").replace(file.getNameWithoutExtension(), ""))
 
         return TextResult(path + ":" + filename)
     }
 
     override fun isAcceptableInContext(context: TemplateContextType): Boolean {
         return context is PhpContext
+    }
+
+    private fun toKebabCase(string: String): String {
+        var modified = Regex("([A-Z])").replace(string, "-$1")
+        modified = modified.lowercase()
+        modified = Regex("^-").replace(modified, "")
+
+        return modified
     }
 }

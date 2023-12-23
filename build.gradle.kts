@@ -4,8 +4,8 @@ plugins {
     id("org.jetbrains.intellij") version "1.15.0"
 }
 
-group = "com.amgrade.phpstorm.snippets"
-version = "1.0.0"
+group = "com.amgrade.phpstorm-snippets"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -31,8 +31,8 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("222")
-        untilBuild.set("232.*")
+        sinceBuild.set("223")
+        untilBuild.set("")
     }
 
     signPlugin {
