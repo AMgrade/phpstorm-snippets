@@ -20,6 +20,11 @@ internal class PhpNamespaceMacro : MacroBase {
 
         filePath = filePath.substring(0, filePath.lastIndexOf("/"))
         filePath = filePath.replace("/", "\\")
+
+        if ("" == filePath) {
+            return null
+        }
+
         filePath = filePath.substring(1)
 
         filePath = filePath.replaceFirstChar {
