@@ -2,13 +2,15 @@
     <template name="ce" value="console.error($EXPRESSION$);" description="console.error" toReformat="false" toShortenFQNames="true">
         <variable name="EXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
-            <option name="JAVA_SCRIPT" value="true" />
+            <option name="JS_STATEMENT" value="true" />
+            <option name="TS_STATEMENT" value="true" />
         </context>
     </template>
     <template name="cl" value="console.log($EXPRESSION$);" description="console.log" toReformat="false" toShortenFQNames="true">
         <variable name="EXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
-            <option name="JAVA_SCRIPT" value="true" />
+            <option name="JS_STATEMENT" value="true" />
+            <option name="TS_STATEMENT" value="true" />
         </context>
     </template>
 </templateSet>

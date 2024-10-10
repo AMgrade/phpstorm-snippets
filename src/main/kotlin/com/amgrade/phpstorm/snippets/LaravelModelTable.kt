@@ -35,7 +35,7 @@ internal class LaravelModelTable : MacroBase {
             filename.endsWith("x") ||
             filename.endsWith("sh") ||
             filename.endsWith("s") ||
-            filename.endsWith("0")
+            filename.endsWith("o")
         ) {
             return TextResult(filename + "es")
         }
